@@ -9,6 +9,7 @@
 
 	let {
 		logoUrl,
+		logoBg = 'bg-white dark:bg-foreground',
 		company,
 		title,
 		subtitle,
@@ -19,6 +20,7 @@
 		end
 	}: {
 		logoUrl: string;
+		logoBg?: string;
 		company: string;
 		title: string;
 		subtitle?: string;
@@ -45,7 +47,7 @@
 <a href={href || '#'} onclick={handleClick}>
 	<div class="flex rounded-lg bg-card text-card-foreground p-2">
 		<div class="flex-none">
-			<Avatar.Root class="bg-white m-auto size-12 border-2 border-muted rounded-full overflow-hidden dark:bg-foreground">
+			<Avatar.Root class="{logoBg} m-auto size-12 border-2 border-muted rounded-full overflow-hidden">
 				<Avatar.Image src={logoUrl} alt={company} class="object-contain p-1.5 rounded-full" />
 				<Avatar.Fallback>{company[0]}</Avatar.Fallback>
 			</Avatar.Root>

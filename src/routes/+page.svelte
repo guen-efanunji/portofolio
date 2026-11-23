@@ -88,6 +88,7 @@
 							start={work.start}
 							end={work.end}
 							logoUrl={work.logoUrl}
+							logoBg={work.logoBg}
 							company={work.company}
 							title={work.title}
 							href={work.href}
@@ -143,11 +144,7 @@
 							<h2 class="text-3xl font-bold tracking-tighter sm:text-5xl">
 								{$t('checkLatestWork')}
 							</h2>
-							<p
-								class="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
-							>
-								{$t('projectsDesc')}
-							</p>
+
 						</div>
 					</div>
 				</BlurFade>

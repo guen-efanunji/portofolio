@@ -2,6 +2,8 @@ import { CodeIcon, Github, Globe, HomeIcon, NotebookIcon, Youtube } from 'lucide
 // Navbar Icons
 import GithubSvg from '$lib/imgs/github.svg';
 import GithubDarkSvg from '$lib/imgs/github-dark.svg';
+import LinkedinSvg from '$lib/imgs/linkedin.svg';
+import LinkedinDarkSvg from '$lib/imgs/linkedin-dark.svg';
 
 import GmailSvg from '$lib/imgs/gmail.svg';
 import GmailDarkSvg from '$lib/imgs/gmail-dark.svg';
@@ -12,6 +14,8 @@ import InstagramLight from '$lib/imgs/instagram-light.png';
 import KesehatanImg from '$lib/imgs/kesehatan.webp';
 import TamoraImg from '$lib/imgs/tamoraputra.webp';
 import SelayarImg from '$lib/imgs/selayar.webp';
+import PaspotoImg from '$lib/imgs/paspoto.webp';
+import TarayaImg from '$lib/imgs/taraya.webp';
 
 export let DATA_EN = {
 	name: 'Muhammad Norshahlan',
@@ -24,7 +28,7 @@ export let DATA_EN = {
 		'Fullstack Web Developer & Graphic Designer. I am a passionate and creative professional specializing in web development and graphic design.',
 	summary:
 		'Fullstack Web Developer & Graphic Designer\n\nI am a passionate and creative professional specializing in web development and graphic design. With a keen eye for detail and a love for innovative solutions, I strive to create visually stunning and highly functional digital experiences.\n\nA Fullstack Web Developer will use their frontend and backend development understanding to create dynamic web applications. Using programming languages such as HTML, CSS and javascript to create the way the user interface looks. On the other hand, a Graphic designer focuses on creating excellent visual designs for branding and marketing. They use software like Adobe Photoshop, Illustrator to create Graphics, Logos and the layout of a page etc. Combining their technical know-how with a creative spin-churn out dynamic digital experiences.',
-	avatarUrl: 'https://i.pinimg.com/564x/df/d2/76/dfd276448eed0f2b6094d1cb2c9d0269.jpg',
+	avatarUrl: PaspotoImg,
 	skills: [
 		'HTML',
 		'CSS',
@@ -52,12 +56,12 @@ export let DATA_EN = {
 		email: 'alansnulien@gmail.com',
 		tel: '+6285836350018',
 		social: {
-			GitHub: {
-				name: 'GitHub',
-				url: 'https://github.com/MrPinguiiin',
-				icon: GithubSvg,
+			LinkedIn: {
+				name: 'LinkedIn',
+				url: 'https://www.linkedin.com/in/muhammadnorshahlan/details/projects/',
+				icon: LinkedinSvg,
 				navbar: true,
-				dark_icon: GithubDarkSvg
+				dark_icon: LinkedinDarkSvg
 			},
 			instagram: {
 				name: 'Instagram',
@@ -108,6 +112,7 @@ export let DATA_EN = {
 			location: 'Kota Medan, North Sumatra, Indonesia',
 			title: 'Software Engineer',
 			logoUrl: SelayarImg,
+			logoBg: 'bg-black dark:bg-transparent',
 			start: 'Jun 2024',
 			end: 'Nov 2026',
 			description:
@@ -142,247 +147,38 @@ export let DATA_EN = {
 	],
 	projects: [
 		{
-			title: 'Portofolio',
-			href: 'https://mystorytell.vercel.app/',
-			dates: '2024 - Present',
+			title: 'Taraya',
+			href: 'https://taraya.cc/',
+			dates: '2026',
 			active: true,
 			description:
-				'Personal portfolio website showcasing fullstack development and graphic design skills. Features modern design with sections for about, skills, experience, portfolio showcase, and contact information.',
+				'Taraya is a modern web application built with SvelteKit and Go backend, featuring a clean and fast user experience.',
 			technologies: [
 				'Svelte',
 				'SvelteKit',
 				'Tailwind CSS',
 				'Vite',
-				'Radix UI',
-				'Magic UI',
-				'shadcn/ui',
 				'Lucide',
-				'Swiper',
-				'PWA'
+				'PWA',
+				'Open Graph',
+				'HTTP/3',
+				'CDN',
+				'Cloudflare',
+				'Paraglide JS',
+				'Font scripts',
+				'Priority Hints',
+				'Cloudflare Browser Insights',
+				'Go'
 			],
 			links: [
 				{
 					type: 'Website',
-					href: 'https://mystorytell.vercel.app/',
+					href: 'https://taraya.cc/',
 					icon: Globe
 				}
 			],
-			image: '',
-			video: 'https://image.badcode.biz.id/videos/portofolio.mp4'
-		},
-		{
-			title: 'Image Enhancement & Media API',
-			href: 'https://api-image.sendvitation.com/docs',
-			dates: '2024 - Present',
-			active: true,
-			description:
-				'Comprehensive REST API service offering multiple image and media processing capabilities. Features include AI-powered image enhancement, background removal, music analysis and generation, OTP management, YouTube audio download, and combination tools. Fully documented with interactive API documentation.',
-			technologies: [
-				'FastAPI',
-				'Python',
-				'Uvicorn',
-				'React',
-				'Swagger UI',
-				'jsDelivr'
-			],
-			links: [
-				{
-					type: 'Website',
-					href: 'https://api-image.sendvitation.com/docs',
-					icon: Globe
-				}
-			],
-			image: '',
-			video: 'https://image.badcode.biz.id/videos/AIIMAGE.mp4'
-		},
-		{
-			title: 'mailHog',
-			href: 'https://mailhog.vercel.app/',
-			dates: '2024 - Present',
-			active: true,
-			description:
-				'Temporary email generator service that allows users to create disposable email addresses instantly. Perfect for testing, privacy protection, and avoiding spam on online registrations.',
-			technologies: [
-				'Svelte',
-				'SvelteKit',
-				'Tailwind CSS',
-				'Vite',
-				'Vercel',
-				'Radix UI',
-				'shadcn/ui',
-				'Lucide'
-			],
-			links: [
-				{
-					type: 'Website',
-					href: 'https://mailhog.vercel.app/',
-					icon: Globe
-				}
-			],
-			image: '',
-			video: 'https://image.badcode.biz.id/videos/tempmail.mp4'
-		},
-		{
-			title: 'Map Picker',
-			href: 'https://mapker.vercel.app/',
-			dates: '2024 - Present',
-			active: true,
-			description:
-				'Free and open-source map picker component for Svelte using OpenStreetMap and Leaflet. Features location selection, search functionality, customizable styling, and embed code generation.',
-			technologies: [
-				'Svelte',
-				'SvelteKit',
-				'Vite',
-				'Leaflet',
-				'Geoapify',
-				'Vercel',
-				'HSTS'
-			],
-			links: [
-				{
-					type: 'Website',
-					href: 'https://mapker.vercel.app/',
-					icon: Globe
-				}
-			],
-			image: '',
-			video: 'https://image.badcode.biz.id/videos/MapPicker.mp4'
-		},
-		{
-			title: 'POS Coffee Shop',
-			href: 'https://www.beanbill.my.id/',
-			dates: '2024 - Present',
-			active: true,
-			description:
-				'All-in-one point-of-sale solution designed specifically for coffee shops. Streamlines operations with order management, real-time analytics, inventory tracking, and integrated payment systems.',
-			technologies: [
-				'Svelte',
-				'SvelteKit',
-				'Vite',
-				'Vercel',
-				'Google Font API'
-			],
-			links: [
-				{
-					type: 'Website',
-					href: 'https://www.beanbill.my.id/',
-					icon: Globe
-				}
-			],
-			image: '',
-			video: 'https://image.badcode.biz.id/videos/POS-coffee.mp4'
-		},
-		{
-			title: 'JNE LABEL ANALYZER',
-			href: 'https://jne-analyzer.vercel.app/',
-			dates: '2024 - Present',
-			active: true,
-			description:
-				'Smart tool to analyze shipping labels and extract package information with costs. Uses AI to process JNE shipping label images and automatically extract sender, recipient, and pricing details.',
-			technologies: [
-				'Next.js',
-				'React',
-				'Tailwind CSS',
-				'Radix UI',
-				'shadcn/ui',
-				'Lucide',
-				'Vercel',
-				'Webpack',
-				'Priority Hints'
-			],
-			links: [
-				{
-					type: 'Website',
-					href: 'https://jne-analyzer.vercel.app/',
-					icon: Globe
-				}
-			],
-			image: '',
-			video: 'https://image.badcode.biz.id/videos/JNE.mp4'
-		},
-		{
-			title: 'Image Converter',
-			href: 'https://imagecv.sendvitation.com/',
-			dates: '2024 - Present',
-			active: true,
-			description:
-				'Powerful image conversion tool supporting multiple formats including PNG, JPG, WebP, GIF, and BMP. Features bulk processing up to 30 images, drag & drop interface, and privacy-focused processing.',
-			technologies: [
-				'Next.js',
-				'React',
-				'Tailwind CSS',
-				'Radix UI',
-				'shadcn/ui',
-				'Lucide',
-				'Vercel',
-				'Webpack',
-				'Priority Hints'
-			],
-			links: [
-				{
-					type: 'Website',
-					href: 'https://imagecv.sendvitation.com/',
-					icon: Globe
-				}
-			],
-			image: '',
-			video: 'https://image.badcode.biz.id/videos/converter.mp4'
-		},
-		{
-			title: 'Self Photobooth',
-			href: 'https://photoqu.vercel.app/',
-			dates: '2024 - Present',
-			active: true,
-			description:
-				'Interactive photo booth application that allows users to capture photos, customize them, and share with others. Features countdown timer, photo history, and instant sharing capabilities.',
-			technologies: [
-				'Next.js',
-				'React',
-				'Tailwind CSS',
-				'Radix UI',
-				'shadcn/ui',
-				'Lucide',
-				'Vercel',
-				'Webpack',
-				'Priority Hints'
-			],
-			links: [
-				{
-					type: 'Website',
-					href: 'https://photoqu.vercel.app/',
-					icon: Globe
-				}
-			],
-			image: '',
-			video: 'https://image.badcode.biz.id/videos/photoboot.mp4'
-		},
-		{
-			title: 'Proxy Serverless x Nautica',
-			href: 'https://serverless.badcode.biz.id/',
-			dates: '2024 - Present',
-			active: true,
-			description:
-				'Serverless proxy service providing location detection, server status monitoring, and domain management. Features IP geolocation, ISP detection, and responsive theme switching.',
-			technologies: [
-				'Next.js',
-				'React',
-				'Tailwind CSS',
-				'Radix UI',
-				'shadcn/ui',
-				'Lucide',
-				'Vercel',
-				'Webpack',
-				'Priority Hints'
-			],
-			links: [
-				{
-					type: 'Website',
-					href: 'https://serverless.badcode.biz.id/',
-					icon: Globe
-				}
-			],
-			image: '',
-			video: 'https://image.badcode.biz.id/videos/serverless.mp4'
+			image: TarayaImg,
+			video: ''
 		}
 	],
 	hackathons: [
@@ -815,39 +611,7 @@ const ID_OVERRIDES = {
 	projects: [
 		{
 			description:
-				'Website portofolio pribadi yang menampilkan keahlian pengembangan fullstack dan desain grafis. Memiliki desain modern dengan bagian tentang, keahlian, pengalaman, showcase portofolio, dan informasi kontak.'
-		},
-		{
-			description:
-				'Layanan REST API komprehensif yang menawarkan berbagai kemampuan pemrosesan gambar dan media. Fitur meliputi peningkatan gambar berbasis AI, penghapusan background, analisis dan pembuatan musik, manajemen OTP, unduhan audio YouTube, dan alat kombinasi. Terdokumentasi lengkap dengan dokumentasi API interaktif.'
-		},
-		{
-			description:
-				'Layanan generator email sementara yang memungkinkan pengguna membuat alamat email sekali pakai secara instan. Sempurna untuk pengujian, perlindungan privasi, dan menghindari spam pada pendaftaran online.'
-		},
-		{
-			description:
-				'Komponen pemilih peta gratis dan open-source untuk Svelte menggunakan OpenStreetMap dan Leaflet. Fitur pemilihan lokasi, fungsi pencarian, styling yang dapat disesuaikan, dan pembuatan kode embed.'
-		},
-		{
-			description:
-				'Solusi point-of-sale all-in-one yang dirancang khusus untuk kedai kopi. Menyederhanakan operasional dengan manajemen pesanan, analitik real-time, pelacakan inventaris, dan sistem pembayaran terintegrasi.'
-		},
-		{
-			description:
-				'Alat pintar untuk menganalisis label pengiriman dan mengekstrak informasi paket beserta biayanya. Menggunakan AI untuk memproses gambar label pengiriman JNE dan secara otomatis mengekstrak detail pengirim, penerima, dan harga.'
-		},
-		{
-			description:
-				'Alat konversi gambar yang powerful mendukung berbagai format termasuk PNG, JPG, WebP, GIF, dan BMP. Fitur pemrosesan massal hingga 30 gambar, antarmuka drag & drop, dan pemrosesan yang menjaga privasi.'
-		},
-		{
-			description:
-				'Aplikasi photo booth interaktif yang memungkinkan pengguna mengambil foto, menyesuaikannya, dan membagikannya kepada orang lain. Fitur timer hitung mundur, riwayat foto, dan kemampuan berbagi instan.'
-		},
-		{
-			description:
-				'Layanan proxy serverless yang menyediakan deteksi lokasi, pemantauan status server, dan manajemen domain. Fitur geolokasi IP, deteksi ISP, dan pengalihan tema responsif.'
+				'Taraya adalah aplikasi web modern yang dibangun dengan SvelteKit dan backend Go, menampilkan pengalaman pengguna yang bersih dan cepat.'
 		}
 	]
 };
