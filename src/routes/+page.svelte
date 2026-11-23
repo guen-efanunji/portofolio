@@ -57,7 +57,7 @@
 						>
 					</div>
 					<BlurFade delay={BLUR_FADE_DELAY}>
-						<Avatar.Root class="size-28 border bg-muted overflow-hidden">
+						<Avatar.Root class="size-28 border bg-muted overflow-hidden !rounded-xl">
 							<Avatar.Image alt={DATA.name} src={DATA.avatarUrl} class="object-contain" />
 							<Avatar.Fallback>{DATA.initials}</Avatar.Fallback>
 						</Avatar.Root>
