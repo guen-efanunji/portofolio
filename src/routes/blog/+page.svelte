@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { formatDate } from '$lib/utils';
 	import BlurFade from '$lib/components/magic/BlurFade.svelte';
+	import { t } from '$lib/i18n';
 
 	export let data;
 	let BLUR_FADE_DELAY = 0.04;
@@ -8,7 +9,7 @@
 </script>
 
 <svelte:head>
-	<title>Blog</title>
+	<title>{$t('blog')}</title>
 </svelte:head>
 
 <BlurFade delay={BLUR_FADE_DELAY}>

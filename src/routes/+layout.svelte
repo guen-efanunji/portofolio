@@ -4,7 +4,7 @@
 	import { ModeWatcher, setMode } from 'mode-watcher';
 	import * as Tooltip from '$lib/components/ui/tooltip';
 
-	setMode('dark');
+	setMode('light');
 </script>
 
 <ModeWatcher />

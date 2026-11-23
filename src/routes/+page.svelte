@@ -5,8 +5,12 @@
 	import ResumeCard from '$lib/components/portfolio/ResumeCard.svelte';
 	import * as Avatar from '$lib/components/ui/avatar';
 	import Badge from '$lib/components/ui/badge/badge.svelte';
-	import { DATA } from '$lib/data/resume';
+	import { DATA_ID, DATA_EN } from '$lib/data/resume';
+	import { lang } from '$lib/stores/lang';
+	import { t } from '$lib/i18n';
 	import { marked } from 'marked';
+
+	let DATA = $derived($lang === 'en' ? DATA_EN : DATA_ID);
 
 
 	let BLUR_FADE_DELAY = $state(0.04);
@@ -46,10 +50,10 @@
 						<BlurFade
 							delay={BLUR_FADE_DELAY}
 							class="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
-							yOffset={8}>Hi, I'm Muhammad Norshahlan 👋</BlurFade
+							yOffset={8}>{$t('heroGreeting')}</BlurFade
 						>
 						<BlurFade class="max-w-[600px] md:text-xl" delay={BLUR_FADE_DELAY}
-							>Software Engineer turned Entrepreneur. I love building things and helping people.</BlurFade
+							>{$t('heroSubtitle')}</BlurFade
 						>
 					</div>
 					<BlurFade delay={BLUR_FADE_DELAY}>
@@ -63,7 +67,7 @@
 		</section>
 		<section id="about">
 			<BlurFade delay={BLUR_FADE_DELAY}>
-				<h2 class="text-xl font-bold">About</h2>
+				<h2 class="text-xl font-bold">{$t('about')}</h2>
 			</BlurFade>
 			<BlurFade delay={BLUR_FADE_DELAY * 1.4}>
 				<div
@@ -76,7 +80,7 @@
 		<section id="work">
 			<div class="flex min-h-0 flex-col gap-y-3">
 				<BlurFade delay={BLUR_FADE_DELAY}>
-					<h2 class="text-xl font-bold">Work Experience</h2>
+					<h2 class="text-xl font-bold">{$t('workExperience')}</h2>
 				</BlurFade>
 				{#each DATA.work as work, id}
 					<BlurFade delay={BLUR_FADE_DELAY * 1.2 + id * 0.05}>
@@ -97,7 +101,7 @@
 		<section id="education">
 			<div class="flex min-h-0 flex-col gap-y-3">
 				<BlurFade delay={BLUR_FADE_DELAY}>
-					<h2 class="text-xl font-bold">Education</h2>
+					<h2 class="text-xl font-bold">{$t('education')}</h2>
 				</BlurFade>
 				{#each DATA.education as edu, id}
 					<BlurFade delay={BLUR_FADE_DELAY * 1.2 + id * 0.05}>
@@ -117,7 +121,7 @@
 		<section id="skills">
 			<div class="flex min-h-0 flex-col gap-y-3">
 				<BlurFade delay={BLUR_FADE_DELAY}>
-					<h2 class="text-xl font-bold">Skills</h2>
+					<h2 class="text-xl font-bold">{$t('skills')}</h2>
 				</BlurFade>
 				<div class="flex flex-wrap gap-1">
 					{#each DATA.skills as skill, id}
@@ -134,16 +138,15 @@
 					<div class="flex flex-col items-center justify-center space-y-4 text-center">
 						<div class="space-y-2">
 							<div class="inline-block rounded-lg bg-foreground px-3 py-1 text-sm text-background">
-								My Projects
+								{$t('myProjects')}
 							</div>
 							<h2 class="text-3xl font-bold tracking-tighter sm:text-5xl">
-								Check out my latest work
+								{$t('checkLatestWork')}
 							</h2>
 							<p
 								class="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
 							>
-								I&apos;ve worked on a variety of projects, from simple websites to complex web
-								applications. Here are a few of my favorites.
+								{$t('projectsDesc')}
 							</p>
 						</div>
 					</div>

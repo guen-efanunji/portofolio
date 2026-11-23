@@ -13,7 +13,7 @@ import KesehatanImg from '$lib/imgs/kesehatan.webp';
 import TamoraImg from '$lib/imgs/tamoraputra.webp';
 import SelayarImg from '$lib/imgs/selayar.webp';
 
-export let DATA = {
+export let DATA_EN = {
 	name: 'Muhammad Norshahlan',
 	initials: 'MN',
 	url: 'https://mystorytell.vercel.app',
@@ -778,3 +778,158 @@ export let DATA = {
 		}
 	]
 };
+
+// Indonesian translations layered on top of the English data.
+const ID_OVERRIDES = {
+	location: 'Tanjung Morawa, Indonesia',
+	description:
+		'Fullstack Web Developer & Graphic Designer. Saya adalah profesional kreatif yang bersemangat dan ahli dalam pengembangan web serta desain grafis.',
+	summary:
+		'Fullstack Web Developer & Graphic Designer\n\nSaya adalah profesional kreatif yang bersemangat dan ahli dalam pengembangan web serta desain grafis. Dengan ketelitian tinggi dan kecintaan pada solusi inovatif, saya berusaha menciptakan pengalaman digital yang menakjubkan secara visual dan sangat fungsional.\n\nSeorang Fullstack Web Developer menggunakan pemahaman pengembangan frontend dan backend untuk menciptakan aplikasi web dinamis. Menggunakan bahasa pemrograman seperti HTML, CSS, dan JavaScript untuk membangun tampilan antarmuka pengguna. Di sisi lain, seorang Desainer Grafis fokus menciptakan desain visual yang menarik untuk branding dan pemasaran. Mereka menggunakan perangkat lunak seperti Adobe Photoshop, Illustrator untuk membuat grafis, logo, dan tata letak halaman, dll. Menggabungkan pengetahuan teknis dengan sentuhan kreatif menghasilkan pengalaman digital yang dinamis.',
+	navbar: [{ href: '/', icon: null, label: 'Beranda' }, { href: '#', icon: null, label: 'Proyek' }],
+	work: [
+		{
+			location: 'Tanjung Morawa, Indonesia',
+			title: 'Desainer Grafis',
+			description:
+				'Merancang dan membuat konten visual untuk media cetak dan digital termasuk brosur, flyer, logo, spanduk, dan materi pemasaran. Berkolaborasi dengan klien untuk memahami identitas brand dan menerjemahkan konsep menjadi desain visual yang menarik. Menggunakan Adobe Photoshop, Illustrator, dan InDesign untuk membuat grafis dan tata letak berkualitas tinggi. Mengelola berbagai proyek desain dari konsep hingga pengiriman akhir, memastikan konsistensi brand dan memenuhi tenggat waktu klien.'
+		},
+		{
+			location: 'Lubuk Pakam, Indonesia',
+			title: 'Fullstack Web Developer',
+			description:
+				'Mengembangkan dan memelihara aplikasi web fullstack untuk sistem informasi kesehatan. Membangun antarmuka frontend responsif menggunakan framework JavaScript modern dan merancang API backend serta sistem database. Mengimplementasikan fitur manajemen data, pelaporan, dan administrasi pengguna. Berkolaborasi dengan pemangku kepentingan untuk memahami kebutuhan dan memberikan solusi web yang skalabel yang meningkatkan efisiensi operasional dinas kesehatan.'
+		},
+		{
+			location: 'Kota Medan, Sumatera Utara, Indonesia',
+			title: 'Software Engineer',
+			description:
+				'Mengembangkan aplikasi web fullstack yang mencakup frontend dan backend. Men-deploy aplikasi ke lingkungan produksi dan mengelola pipeline deployment. Melakukan pemeliharaan rutin, perbaikan bug, dan optimasi performa untuk memastikan stabilitas sistem. Memperbarui dan meningkatkan fitur secara berkelanjutan berdasarkan umpan balik pengguna dan kebutuhan bisnis. Membangun dan memelihara RESTful API, sistem database, dan antarmuka pengguna responsif menggunakan teknologi modern.'
+		}
+	],
+	education: [
+		{ degree: 'Sarjana Sistem Informasi' },
+		{ degree: 'Komputasi Awan' },
+		{ degree: 'Python' }
+	],
+	projects: [
+		{
+			description:
+				'Website portofolio pribadi yang menampilkan keahlian pengembangan fullstack dan desain grafis. Memiliki desain modern dengan bagian tentang, keahlian, pengalaman, showcase portofolio, dan informasi kontak.'
+		},
+		{
+			description:
+				'Layanan REST API komprehensif yang menawarkan berbagai kemampuan pemrosesan gambar dan media. Fitur meliputi peningkatan gambar berbasis AI, penghapusan background, analisis dan pembuatan musik, manajemen OTP, unduhan audio YouTube, dan alat kombinasi. Terdokumentasi lengkap dengan dokumentasi API interaktif.'
+		},
+		{
+			description:
+				'Layanan generator email sementara yang memungkinkan pengguna membuat alamat email sekali pakai secara instan. Sempurna untuk pengujian, perlindungan privasi, dan menghindari spam pada pendaftaran online.'
+		},
+		{
+			description:
+				'Komponen pemilih peta gratis dan open-source untuk Svelte menggunakan OpenStreetMap dan Leaflet. Fitur pemilihan lokasi, fungsi pencarian, styling yang dapat disesuaikan, dan pembuatan kode embed.'
+		},
+		{
+			description:
+				'Solusi point-of-sale all-in-one yang dirancang khusus untuk kedai kopi. Menyederhanakan operasional dengan manajemen pesanan, analitik real-time, pelacakan inventaris, dan sistem pembayaran terintegrasi.'
+		},
+		{
+			description:
+				'Alat pintar untuk menganalisis label pengiriman dan mengekstrak informasi paket beserta biayanya. Menggunakan AI untuk memproses gambar label pengiriman JNE dan secara otomatis mengekstrak detail pengirim, penerima, dan harga.'
+		},
+		{
+			description:
+				'Alat konversi gambar yang powerful mendukung berbagai format termasuk PNG, JPG, WebP, GIF, dan BMP. Fitur pemrosesan massal hingga 30 gambar, antarmuka drag & drop, dan pemrosesan yang menjaga privasi.'
+		},
+		{
+			description:
+				'Aplikasi photo booth interaktif yang memungkinkan pengguna mengambil foto, menyesuaikannya, dan membagikannya kepada orang lain. Fitur timer hitung mundur, riwayat foto, dan kemampuan berbagi instan.'
+		},
+		{
+			description:
+				'Layanan proxy serverless yang menyediakan deteksi lokasi, pemantauan status server, dan manajemen domain. Fitur geolokasi IP, deteksi ISP, dan pengalihan tema responsif.'
+		}
+	]
+};
+
+function mergeData(base: any, overrides: any) {
+	const result: any = { ...base };
+	for (const key of Object.keys(overrides)) {
+		const ov = overrides[key];
+		const bv = base[key];
+		if (Array.isArray(ov) && Array.isArray(bv)) {
+			result[key] = bv.map((item: any, i: number) => {
+				if (ov[i] && typeof ov[i] === 'object' && !Array.isArray(ov[i])) {
+					// merge icons etc from base item
+					const merged = { ...item };
+					for (const k of Object.keys(ov[i])) {
+						if (ov[i][k] !== null && ov[i][k] !== undefined) {
+							merged[k] = ov[i][k];
+						}
+					}
+					// restore icon references if overridden with null
+					if (ov[i].icon === null) merged.icon = item.icon;
+					return merged;
+				}
+				return ov[i] ?? item;
+			});
+		} else if (ov && typeof ov === 'object' && !Array.isArray(ov) && bv && typeof bv === 'object') {
+			result[key] = mergeData(bv, ov);
+		} else {
+			result[key] = ov;
+		}
+	}
+	// navbar icons: restore from base since override used null
+	if (Array.isArray(result.navbar) && Array.isArray(base.navbar)) {
+		result.navbar = result.navbar.map((n: any, i: number) => ({
+			...base.navbar[i],
+			...n,
+			icon: n.icon ?? base.navbar[i]?.icon
+		}));
+	}
+	// project links: keep base icons
+	if (Array.isArray(result.projects) && Array.isArray(base.projects)) {
+		result.projects = result.projects.map((p: any, i: number) => {
+			const bp = base.projects[i];
+			if (p.links && bp?.links) {
+				p.links = p.links.map((l: any, j: number) => ({ ...bp.links[j], ...l, icon: l.icon ?? bp.links[j]?.icon }));
+			}
+			// restore technologies if not provided
+			if (!p.technologies) p.technologies = bp?.technologies;
+			if (p.links === undefined) p.links = bp?.links;
+			if (p.title === undefined) p.title = bp?.title;
+			if (p.href === undefined) p.href = bp?.href;
+			if (p.dates === undefined) p.dates = bp?.dates;
+			if (p.active === undefined) p.active = bp?.active;
+			if (p.image === undefined) p.image = bp?.image;
+			if (p.video === undefined) p.video = bp?.video;
+			return p;
+		});
+	}
+	// work: restore fields not overridden
+	if (Array.isArray(result.work) && Array.isArray(base.work)) {
+		result.work = result.work.map((w: any, i: number) => {
+			const bw = base.work[i];
+			for (const k of ['company', 'href', 'badges', 'logoUrl', 'start', 'end']) {
+				if (w[k] === undefined) w[k] = bw?.[k];
+			}
+			return w;
+		});
+	}
+	// education: restore fields
+	if (Array.isArray(result.education) && Array.isArray(base.education)) {
+		result.education = result.education.map((e: any, i: number) => {
+			const be = base.education[i];
+			for (const k of ['school', 'href', 'logoUrl', 'start', 'end']) {
+				if (e[k] === undefined) e[k] = be?.[k];
+			}
+			return e;
+		});
+	}
+	return result;
+}
+
+export const DATA_ID = mergeData(DATA_EN, ID_OVERRIDES);
+
+// Default (Indonesian)
+export const DATA = DATA_ID;

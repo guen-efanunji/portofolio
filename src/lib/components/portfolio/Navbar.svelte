@@ -1,5 +1,7 @@
 <script lang="ts">
-	import { DATA } from '$lib/data/resume';
+	import { DATA_ID, DATA_EN } from '$lib/data/resume';
+	import { lang } from '$lib/stores/lang';
+	import { t } from '$lib/i18n';
 	import Dock from '../magic/Dock.svelte';
 	import DockIcon from '../magic/DockIcon.svelte';
 	import * as Tooltip from '$lib/components/ui/tooltip';
@@ -8,6 +10,10 @@
 	import Button from '$lib/components/ui/button/button.svelte';
 	import { mode } from 'mode-watcher';
 	$: theme = $mode;
+	$: DATA = $lang === 'en' ? DATA_EN : DATA_ID;
+	function toggleLang() {
+		lang.update((l) => (l === 'en' ? 'id' : 'en'));
+	}
 </script>
 
 <div
@@ -63,10 +69,22 @@
 		<DockIcon {magnification} {mouseX} {distance}>
 			<Tooltip.Root delayDuration={300}>
 				<Tooltip.Trigger>
+					<Button onclick={toggleLang} variant="ghost" size="icon" class="size-12 rounded-full text-xs font-bold">
+						{$lang === 'en' ? 'ID' : 'EN'}
+					</Button>
+				</Tooltip.Trigger>
+				<Tooltip.Content>
+					<p>{$t('toggleLang')}</p>
+				</Tooltip.Content>
+			</Tooltip.Root>
+		</DockIcon>
+		<DockIcon {magnification} {mouseX} {distance}>
+			<Tooltip.Root delayDuration={300}>
+				<Tooltip.Trigger>
 					<ModeToggle />
 				</Tooltip.Trigger>
 				<Tooltip.Content>
-					<p>Theme</p>
+					<p>{$t('toggleTheme')}</p>
 				</Tooltip.Content>
 			</Tooltip.Root>
 		</DockIcon>

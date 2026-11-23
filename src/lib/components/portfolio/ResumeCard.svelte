@@ -2,6 +2,7 @@
 	import * as Avatar from '$lib/components/ui/avatar';
 	import { Badge } from '$lib/components/ui/badge';
 	import { cn } from '$lib/utils';
+	import { t } from '$lib/i18n';
 	import { ChevronRightIcon } from 'lucide-svelte';
 	import { quartOut } from 'svelte/easing';
 	import { slide } from 'svelte/transition';
@@ -44,8 +45,8 @@
 <a href={href || '#'} onclick={handleClick}>
 	<div class="flex rounded-lg bg-card text-card-foreground p-2">
 		<div class="flex-none">
-			<Avatar.Root class="bg-muted-background m-auto size-12 border dark:bg-foreground">
-				<Avatar.Image src={logoUrl} alt={company} class="object-cover p-1 rounded-full" />
+			<Avatar.Root class="bg-white m-auto size-12 border-2 border-muted rounded-full overflow-hidden dark:bg-foreground">
+				<Avatar.Image src={logoUrl} alt={company} class="object-contain p-1.5 rounded-full" />
 				<Avatar.Fallback>{company[0]}</Avatar.Fallback>
 			</Avatar.Root>
 		</div>
@@ -73,7 +74,7 @@
 						/>
 					</h3>
 					<div class="text-right text-xs tabular-nums text-muted-foreground sm:text-sm">
-						{start} - {end || 'Present'}
+						{start} - {end || $t('present')}
 					</div>
 				</div>
 				{#if title}
