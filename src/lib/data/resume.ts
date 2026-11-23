@@ -20,6 +20,7 @@ import VivnioImg from '$lib/imgs/vivnio.webp';
 import AethrionImg from '$lib/imgs/aethrion.webp';
 import HayyStyleImg from '$lib/imgs/hayy-style.webp';
 import BeanbillImg from '$lib/imgs/beanbill.webp';
+import LoomWorkspaceImg from '$lib/imgs/loom-workspace.webp';
 
 export let DATA_EN = {
 	name: 'Muhammad Norshahlan',
@@ -155,6 +156,24 @@ export let DATA_EN = {
 		}
 	],
 	projects: [
+		{
+			title: 'Loom Workspace',
+			href: 'https://loomworkspace.bond/',
+			dates: '2026',
+			active: true,
+			description:
+				'Workspace lokal untuk mengelola coding agent secara paralel. Buat rencana, jalankan task pada Git worktree terpisah, lalu tinjau perubahan sebelum menggabungkannya.',
+			technologies: ['SvelteKit', 'TypeScript', 'Tailwind CSS', 'Bun', 'OpenCode', 'Git Worktrees'],
+			links: [
+				{
+					type: 'Website',
+					href: 'https://loomworkspace.bond/',
+					icon: Globe
+				}
+			],
+			image: LoomWorkspaceImg,
+			video: ''
+		},
 		{
 			title: 'Vivnio',
 			href: 'https://vivnio.com/',
@@ -689,6 +708,10 @@ const ID_OVERRIDES = {
 	projects: [
 		{
 			description:
+				'Workspace lokal untuk mengelola coding agent secara paralel. Buat rencana, jalankan task pada Git worktree terpisah, lalu tinjau perubahan sebelum menggabungkannya.'
+		},
+		{
+			description:
 				'Platform white-label untuk membantu reseller membangun bisnis undangan digital dengan brand sendiri.'
 		},
 		{
@@ -701,11 +724,11 @@ const ID_OVERRIDES = {
 		},
 		{
 			description:
-				'Jelajahi tarot, zodiak, numerologi, kecocokan, cek aura, pembacaan garis tangan, dan Insight AI sebagai teman refleksi diri.'
+				'Mesin simulasi hidup untuk skenario, masyarakat, manusia digital, dan keputusan yang membentuk apa yang terjadi selanjutnya. Berinovasi pada spirit masyarakat digital.'
 		},
 		{
 			description:
-				'Mesin simulasi hidup untuk skenario, masyarakat, manusia digital, dan keputusan yang membentuk apa yang terjadi selanjutnya. Berinovasi pada spirit masyarakat digital.'
+				'Jelajahi tarot, zodiak, numerologi, kecocokan, cek aura, pembacaan garis tangan, dan Insight AI sebagai teman refleksi diri.'
 		}
 	]
 };
