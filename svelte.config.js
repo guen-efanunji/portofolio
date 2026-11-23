@@ -25,7 +25,7 @@ const config = {
 
 	kit: {
 		adapter: adapter({
-			runtime: 'nodejs24.x'
+			runtime: 'nodejs22.x'
 		})
 	}
 };
