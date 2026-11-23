@@ -101,14 +101,14 @@ export let DATA = {
 				'Developed and maintained fullstack web applications for health information systems. Built responsive frontend interfaces using modern JavaScript frameworks and designed backend APIs and database systems. Implemented features for data management, reporting, and user administration. Collaborated with stakeholders to understand requirements and deliver scalable web solutions that improve operational efficiency for the health department.'
 		},
 		{
-			company: 'Sendvitation',
-			href: 'https://sendvitation.com',
+			company: 'PT Arah Baru Selayar',
+			href: 'https://vivnio.com',
 			badges: [],
-			location: 'Medan, Indonesia',
+			location: 'Kota Medan, North Sumatra, Indonesia',
 			title: 'Software Engineer',
-			logoUrl: "https://sendvitation.com/sendvitation.png",
-			start: 'Mei 2024',
-			end: 'Present',
+			logoUrl: 'https://cdn.vivnio.com/company/favicon-r.svg',
+			start: 'Jun 2024',
+			end: 'Nov 2026',
 			description:
 				'Developed fullstack web applications handling both frontend and backend development. Deployed applications to production environments and managed deployment pipelines. Performed regular maintenance, bug fixes, and performance optimization to ensure system stability. Continuously updated and enhanced features based on user feedback and business requirements. Built and maintained RESTful APIs, database systems, and responsive user interfaces using modern technologies.'
 		},
