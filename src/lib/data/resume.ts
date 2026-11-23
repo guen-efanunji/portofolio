@@ -16,6 +16,10 @@ import TamoraImg from '$lib/imgs/tamoraputra.webp';
 import SelayarImg from '$lib/imgs/selayar.webp';
 import PaspotoImg from '$lib/imgs/paspoto.webp';
 import TarayaImg from '$lib/imgs/taraya.webp';
+import VivnioImg from '$lib/imgs/vivnio.webp';
+import AethrionImg from '$lib/imgs/aethrion.webp';
+import HayyStyleImg from '$lib/imgs/hayy-style.webp';
+import BeanbillImg from '$lib/imgs/beanbill.webp';
 
 export let DATA_EN = {
 	name: 'Muhammad Norshahlan',
@@ -39,6 +43,11 @@ export let DATA_EN = {
 		'MySQL',
 		'Laravel Framework',
 		'SvelteKit Framework',
+		'Docker',
+		'Git',
+		'Kubernetes',
+		'Go',
+		'Hono',
 		'Adobe Photoshop',
 		'Adobe Premiere',
 		'Corel Draw',
@@ -147,28 +156,97 @@ export let DATA_EN = {
 	],
 	projects: [
 		{
+			title: 'Vivnio',
+			href: 'https://vivnio.com/',
+			dates: '2026',
+			active: true,
+			description:
+				'Platform white-label untuk membantu reseller membangun bisnis undangan digital dengan brand sendiri.',
+			technologies: [
+				'SvelteKit',
+				'Svelte',
+				'Tailwind CSS',
+				'GSAP',
+				'PWA'
+			],
+			links: [
+				{
+					type: 'Website',
+					href: 'https://vivnio.com/',
+					icon: Globe
+				}
+			],
+			image: VivnioImg,
+			video: ''
+		},
+		{
+			title: 'Beanbill',
+			href: 'https://beanbillcf.vercel.app/',
+			dates: '2026',
+			active: true,
+			description:
+				'Solusi POS untuk coffee shop modern, dengan pengelolaan penjualan, inventori, staf, resep, dan laporan dalam satu platform.',
+			technologies: ['SvelteKit', 'Tailwind CSS', 'Prisma ORM', 'Vercel'],
+			links: [
+				{
+					type: 'Website',
+					href: 'https://beanbillcf.vercel.app/',
+					icon: Globe
+				}
+			],
+			image: BeanbillImg,
+			video: ''
+		},
+		{
+			title: 'Hayy Style',
+			href: 'https://hayystyle.my.id/',
+			dates: '2026',
+			active: true,
+			description:
+				'Sistem manajemen toko dan POS kasir untuk membantu operasional toko pakaian, mulai dari pengelolaan produk hingga penjualan.',
+			technologies: ['SvelteKit', 'Tailwind CSS'],
+			links: [
+				{
+					type: 'Website',
+					href: 'https://hayystyle.my.id/',
+					icon: Globe
+				}
+			],
+			image: HayyStyleImg,
+			video: ''
+		},
+		{
+			title: 'Aethrion',
+			href: 'https://replika.biz.id/',
+			dates: '2026',
+			active: true,
+			description:
+				'Mesin simulasi hidup untuk skenario, masyarakat, manusia digital, dan keputusan yang membentuk apa yang terjadi selanjutnya. Berinovasi pada spirit masyarakat digital.',
+			technologies: ['Svelte', 'Hono', 'Tailwind CSS'],
+			links: [
+				{
+					type: 'Website',
+					href: 'https://replika.biz.id/',
+					icon: Globe
+				}
+			],
+			image: AethrionImg,
+			video: ''
+		},
+		{
 			title: 'Taraya',
 			href: 'https://taraya.cc/',
 			dates: '2026',
 			active: true,
 			description:
-				'Taraya is a modern web application built with SvelteKit and Go backend, featuring a clean and fast user experience.',
+				'Jelajahi tarot, zodiak, numerologi, kecocokan, cek aura, pembacaan garis tangan, dan Insight AI sebagai teman refleksi diri.',
 			technologies: [
-				'Svelte',
 				'SvelteKit',
+				'Svelte',
 				'Tailwind CSS',
-				'Vite',
-				'Lucide',
+				'Go',
 				'PWA',
-				'Open Graph',
-				'HTTP/3',
-				'CDN',
-				'Cloudflare',
-				'Paraglide JS',
-				'Font scripts',
-				'Priority Hints',
-				'Cloudflare Browser Insights',
-				'Go'
+				'Cloudflare'
 			],
 			links: [
 				{
@@ -611,7 +689,23 @@ const ID_OVERRIDES = {
 	projects: [
 		{
 			description:
-				'Taraya adalah aplikasi web modern yang dibangun dengan SvelteKit dan backend Go, menampilkan pengalaman pengguna yang bersih dan cepat.'
+				'Platform white-label untuk membantu reseller membangun bisnis undangan digital dengan brand sendiri.'
+		},
+		{
+			description:
+				'Solusi POS untuk coffee shop modern, dengan pengelolaan penjualan, inventori, staf, resep, dan laporan dalam satu platform.'
+		},
+		{
+			description:
+				'Sistem manajemen toko dan POS kasir untuk membantu operasional toko pakaian, mulai dari pengelolaan produk hingga penjualan.'
+		},
+		{
+			description:
+				'Jelajahi tarot, zodiak, numerologi, kecocokan, cek aura, pembacaan garis tangan, dan Insight AI sebagai teman refleksi diri.'
+		},
+		{
+			description:
+				'Mesin simulasi hidup untuk skenario, masyarakat, manusia digital, dan keputusan yang membentuk apa yang terjadi selanjutnya. Berinovasi pada spirit masyarakat digital.'
 		}
 	]
 };

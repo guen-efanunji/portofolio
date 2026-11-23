@@ -47,8 +47,13 @@
 <a href={href || '#'} onclick={handleClick}>
 	<div class="flex rounded-lg bg-card text-card-foreground p-2">
 		<div class="flex-none">
-			<Avatar.Root class="{logoBg} m-auto size-12 border-2 border-muted rounded-full overflow-hidden">
-				<Avatar.Image src={logoUrl} alt={company} class="object-contain p-1.5 rounded-full" />
+			<Avatar.Root
+				class={cn(
+					'm-auto size-12 overflow-hidden rounded-full border-2 border-muted',
+					company === 'PT Arah Baru Selayar' ? 'bg-black dark:bg-transparent' : logoBg
+				)}
+			>
+				<Avatar.Image src={logoUrl} alt={company} class="rounded-full object-contain p-1.5" />
 				<Avatar.Fallback>{company[0]}</Avatar.Fallback>
 			</Avatar.Root>
 		</div>

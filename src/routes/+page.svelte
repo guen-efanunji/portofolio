@@ -44,9 +44,15 @@
 
 <main class="relative z-10 flex min-h-[100dvh] flex-col space-y-10">
 	<section id="hero">
-			<div class="mx-auto w-full max-w-2xl space-y-8">
-				<div class="flex justify-between gap-2">
-					<div class="flex flex-1 flex-col space-y-1.5">
+			<div class="mx-auto w-full max-w-2xl space-y-6">
+				<div class="flex flex-col items-center gap-6 text-center">
+					<BlurFade delay={BLUR_FADE_DELAY}>
+						<Avatar.Root class="h-44 w-32 shrink-0 overflow-hidden border bg-muted !rounded-2xl shadow-sm">
+							<Avatar.Image alt={DATA.name} src={DATA.avatarUrl} class="h-full w-full object-cover object-top" />
+							<Avatar.Fallback>{DATA.initials}</Avatar.Fallback>
+						</Avatar.Root>
+					</BlurFade>
+					<div class="flex flex-col space-y-1.5">
 						<BlurFade
 							delay={BLUR_FADE_DELAY}
 							class="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
@@ -56,12 +62,6 @@
 							>{$t('heroSubtitle')}</BlurFade
 						>
 					</div>
-					<BlurFade delay={BLUR_FADE_DELAY}>
-						<Avatar.Root class="size-28 border bg-muted overflow-hidden !rounded-xl">
-							<Avatar.Image alt={DATA.name} src={DATA.avatarUrl} class="object-contain" />
-							<Avatar.Fallback>{DATA.initials}</Avatar.Fallback>
-						</Avatar.Root>
-					</BlurFade>
 				</div>
 			</div>
 		</section>
