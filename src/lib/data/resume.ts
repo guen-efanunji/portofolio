@@ -9,8 +9,9 @@ import GmailDarkSvg from '$lib/imgs/gmail-dark.svg';
 import InstagramDark from '$lib/imgs/instagram-dark.png';
 import InstagramLight from '$lib/imgs/instagram-light.png';
 
-import KesehatanImg from '$lib/imgs/kesehatan.png';
-import TamoraImg from '$lib/imgs/tamoraputra.jpeg';
+import KesehatanImg from '$lib/imgs/kesehatan.webp';
+import TamoraImg from '$lib/imgs/tamoraputra.webp';
+import SelayarImg from '$lib/imgs/selayar.webp';
 
 export let DATA = {
 	name: 'Muhammad Norshahlan',
@@ -106,7 +107,7 @@ export let DATA = {
 			badges: [],
 			location: 'Kota Medan, North Sumatra, Indonesia',
 			title: 'Software Engineer',
-			logoUrl: 'https://cdn.vivnio.com/company/favicon-r.svg',
+			logoUrl: SelayarImg,
 			start: 'Jun 2024',
 			end: 'Nov 2026',
 			description:
