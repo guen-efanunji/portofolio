@@ -162,7 +162,7 @@ export let DATA_EN = {
 			dates: '2026',
 			active: true,
 			description:
-				'Workspace lokal untuk mengelola coding agent secara paralel. Buat rencana, jalankan task pada Git worktree terpisah, lalu tinjau perubahan sebelum menggabungkannya.',
+				'A local workspace for managing coding agents in parallel. Plan your work, run tasks in separate Git worktrees, and review changes before merging them.',
 			technologies: ['SvelteKit', 'TypeScript', 'Tailwind CSS', 'Bun', 'OpenCode', 'Git Worktrees'],
 			links: [
 				{
